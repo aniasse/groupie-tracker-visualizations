@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="stylesheet" href="/static/css/error.css">
+</head>
+<body>
+    <div>
+        {{if .Error400}}
+            <h1> 400 <br> Bad Request </h1>
+            <a href="/">Go Home</a>
+        {{else if .Error404}}
+            <h1> 404 <br> Page Not Found </h1>
+            <a href="/">Go Home</a>
+        {{else if .Error405}}
+            <h1> 405 <br> Method Not Allowed </h1>
+            <a href="/">Go Home</a>
+        {{else if .Error500}}
+            <h1> 500 <br> Internal ServerError </h1>
+            <a href="/">Go Home</a>
+        {{end}}
+    </div>
+</body>
+</html>
