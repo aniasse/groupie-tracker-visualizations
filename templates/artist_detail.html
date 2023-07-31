@@ -61,10 +61,12 @@
             <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
             <script>
 
-                var map = L.map('map').setView([0, 0], 2);
+                var map = L.map('map').setView([0, 0], 3);
                
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: '&copy; OpenStreetMap contributors'
+                    attribution: '&copy; OpenStreetMap contributors',
+                    minZoom: 2,
+                    noWrap: true
                 }).addTo(map);
             
                 // Les coordonnées et noms des villes à afficher
